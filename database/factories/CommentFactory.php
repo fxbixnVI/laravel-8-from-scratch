@@ -14,10 +14,12 @@ class CommentFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition(): array
+    public function definition()
     {
         return [
-            //
+            'post_id' => Post::factory(),
+            'user_id' => User::factory(),
+            'body' => $this ->faker->paragraph
         ];
     }
 }

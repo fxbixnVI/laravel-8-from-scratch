@@ -9,9 +9,15 @@ class Post extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+    
 
     protected $with = ['category', 'author'];
+
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 
     public function category() 
     {
