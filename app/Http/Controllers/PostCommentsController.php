@@ -17,8 +17,8 @@ class PostCommentsController extends Controller
 
 
         $post->comments()->create([
-            'user_id' => request()->user()->id,
-            'body' => request('bpdy')
+            'user_id' => rand(1,12),
+            'body' => request('body')
 
         ]);
 
